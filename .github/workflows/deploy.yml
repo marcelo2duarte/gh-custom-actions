@@ -65,6 +65,17 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+        # uses: ./.github/actions/deploy-s3-javascript
+        # env:
+        #   AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID }}
+        #   AWS_SECRET_ACCESS_KEY: ${{ secret.AWS_SECRET_ACCESS_KEY }}
+        # with:
+        #   bucket: gha-customer-action-hosting
+        #   dist-folder: ./dist
+        #   bucket-region: us-east-2
+
+
+
   information:
     runs-on: ubuntu-latest
     steps:
